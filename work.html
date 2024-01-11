@@ -1,0 +1,417 @@
+
+<html lang="en">
+<head>
+  <title>Notus</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+  <meta name="renderer" content=webkit />
+  <meta name="description" content="notus">
+  <meta name="keywords" content="notus">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no">
+  <script src="/js/hotcss.js"></script>
+  <link rel="stylesheet" href="/css/wap.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/wow.js"></script>
+  <script>
+    // var _hmt = _hmt || [];
+    // (function() {
+    //   var hm = document.createElement("script");
+    //   hm.src = "https://hm.baidu.com/hm.js?e8a03d99c7fed4f4a5c36d738ebe0c94";
+    //   var s = document.getElementsByTagName("script")[0];
+    //   s.parentNode.insertBefore(hm, s);
+    // })();
+  </script>
+  <link rel="stylesheet" href="/css/mescroll.min.css">
+  <script src="/js/mescroll.min.js" charset="utf-8"></script>
+  <style>
+    .content{
+      height: 100%;
+      padding-bottom: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div class="bar">
+  <img src="/img/menu.png" class="menu">
+  <div class="language">
+<!--    <span  lagua="cn">中</span>-->
+    <span class="active" lagua="en">EN</span>
+  </div>
+</div>
+<div class="mask animated">
+  <div class="popup">
+    <img src="/img/closed.png" class="closed">
+    <div class="poto">
+      <a class="" href="/wap">HOME</a>
+      <a class="" href="/wap/about">ABOUT</a>
+      <a class="active" href="/wap/works">WORKS</a>
+      <a class="" href="/wap/contact">CONTACT</a>
+    </div>
+    <p class="language">
+<!--      <span  lagua="cn">中</span>-->
+      <span class="active" lagua="en">EN</span>
+    </p>
+    <img src="/img/qr.png" class="ewm">
+    <div class="share">
+      <a class="face" href="#"></a>
+      <a class="ins" href="#"></a>
+      <a class="wechat"></a>
+      <a class="weibo" href="#"></a>
+    </div>
+  </div>
+</div>
+<script>
+  function setCookie(name,value){
+    var Days = 30;
+    var exp = new Date();
+    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+  }
+  $('.menu').click(function () {
+    $('.mask').removeClass('slideOutUp').addClass('slideInDown').show()
+    $('.mask').on('touchmove', function (event) {
+      event.preventDefault();
+    });
+  })
+  $('.closed').click(function () {
+    $('.mask').addClass('slideOutUp').removeClass('slideInDown')
+    $('.mask').off('touchmove', function (event) {
+      event.preventDefault();
+    });
+  })
+
+  $('.language').on('click','span',function() {
+    $(this).addClass('active').removeClass()
+    setCookie('language',$(this).attr('lagua'))
+    location.reload()
+  })
+
+
+</script>
+<div class="content">
+  <div class="works">
+    <div class="type_btn">
+      <span class="type_active" curId="4" >Hotel</span>
+      <span  curId="5" >Villa</span>
+      <span  curId="6" >Office</span>
+      <span  curId="8" >Other</span>
+    </div>
+    <div id="mescroll" class="mescroll">
+      <ul class="work_list" id="workTodo"></ul>
+    </div>
+  </div>
+</div>
+<script>
+  var curTypeId = 1;
+  var isfirst = true;
+  var popupCount = 0;
+
+  // work case
+  function getWorkCase(caseid,domindex) {
+    // details
+    // $.ajax({
+    //   type:'POST',
+    //   url:'/api/workscase',
+    //   data:{caseId:caseid},
+    //   success:function(req){
+    //     var str = '';
+    //     $.each(JSON.parse(req.imgUrls),function (index,item) {
+    //       str += '<img imgurl="http://www.admin.ccd-hk.com'+item.src+'"  src="/img/loading.gif"  >'
+    //     })
+    //     $('.works').append('<div class="work_popup animated slideInUp"><div class="popup_img mescroll" id="mescroll'+domindex+'">'+str+'</div><div class="popup_close"></div></div>  ')
+    //     popupScroll(domindex)
+    //     $('.work_popup').hide()
+    //     $('.work_popup').eq(domindex).show()
+    //     $('#workTodo').eq(domindex).on('touchmove', function (event) {
+    //       event.preventDefault();
+    //     });
+    //   }
+    // })
+    var req = {
+      "caseId": 198,
+      "title": "成都木棉花酒店",
+      "enTitle": "MUMIAN CHENGDU",
+      "sort": 0,
+      "categoryId": 4,
+      "typeName": "酒店",
+      "content": "",
+      "enContent": "",
+      "isPublish": 1,
+      "creator": "30",
+      "createDate": "2023-07-31 18:29:43",
+      "lastUpdateBy": "30",
+      "lastUpdateDate": "2023-07-31 18:29:43",
+      "imgUrls": "[{\"imgId\":\"568d93f2-f2f4-42e5-ba3b-2970e933cf83\",\"src\":\"/ccd/2023/7/568d93f2-f2f4-42e5-ba3b-2970e933cf83.jpg\",\"name\":\"A-1.jpg\",\"length\":\"465945\"},{\"imgId\":\"77699b20-2698-40ae-a339-a27109edb72a\",\"src\":\"/ccd/2023/7/77699b20-2698-40ae-a339-a27109edb72a.jpg\",\"name\":\"D1-4.jpg\",\"length\":\"549518\"},{\"imgId\":\"cba28d58-af72-4919-9fba-6985b648235e\",\"src\":\"/ccd/2023/7/cba28d58-af72-4919-9fba-6985b648235e.jpg\",\"name\":\"B-2.jpg\",\"length\":\"651573\"},{\"imgId\":\"03410d14-d6e6-404e-b771-0a9f749f65d4\",\"src\":\"/ccd/2023/7/03410d14-d6e6-404e-b771-0a9f749f65d4.jpg\",\"name\":\"B-4.jpg\",\"length\":\"419363\"},{\"imgId\":\"3ef02812-19a9-4584-abcf-8002942cc0d6\",\"src\":\"/ccd/2023/7/3ef02812-19a9-4584-abcf-8002942cc0d6.jpg\",\"name\":\"G-2.jpg\",\"length\":\"642354\"},{\"imgId\":\"5c63b786-a723-423a-9505-4829090f3b05\",\"src\":\"/ccd/2023/7/5c63b786-a723-423a-9505-4829090f3b05.jpg\",\"name\":\"G-7.jpg\",\"length\":\"525370\"},{\"imgId\":\"afd5febd-c2fd-47de-a30f-a2b219713d27\",\"src\":\"/ccd/2023/7/afd5febd-c2fd-47de-a30f-a2b219713d27.jpg\",\"name\":\"G-4.jpg\",\"length\":\"678511\"},{\"imgId\":\"3c313e3e-af78-4d9d-ab26-368461ce6461\",\"src\":\"/ccd/2023/7/3c313e3e-af78-4d9d-ab26-368461ce6461.jpg\",\"name\":\"E-2.jpg\",\"length\":\"1286569\"},{\"imgId\":\"4744ccb9-7d2a-490a-be59-2d45517d9fe8\",\"src\":\"/ccd/2023/7/4744ccb9-7d2a-490a-be59-2d45517d9fe8.jpg\",\"name\":\"D2-3.jpg\",\"length\":\"737731\"},{\"imgId\":\"20e7af10-1237-49bf-80cf-d45fd3b3bfd1\",\"src\":\"/ccd/2023/7/20e7af10-1237-49bf-80cf-d45fd3b3bfd1.jpg\",\"name\":\"G-9.jpg\",\"length\":\"703645\"},{\"imgId\":\"c28d1631-cdfb-472b-aad7-3fddf4f716b3\",\"src\":\"/ccd/2023/7/c28d1631-cdfb-472b-aad7-3fddf4f716b3.jpg\",\"name\":\"H2-4.jpg\",\"length\":\"1130277\"}]",
+      "imgList": []
+    };
+    var str = '';
+    $.each(JSON.parse(req.imgUrls),function (index,item) {
+      str += '<img imgurl="http://www.admin.ccd-hk.com'+item.src+'"  src="/img/loading.gif"  >'
+    })
+    $('.works').append('<div class="work_popup animated slideInUp"><div class="popup_img mescroll" id="mescroll'+domindex+'">'+str+'</div><div class="popup_close"></div></div>  ')
+    popupScroll(domindex)
+    $('.work_popup').hide()
+    $('.work_popup').eq(domindex).show()
+    $('#workTodo').eq(domindex).on('touchmove', function (event) {
+      event.preventDefault();
+    });
+  }
+  // 数据加载
+  function fullLoadData(isremove) {
+    if(isremove){
+      $(document.body).toggleClass("html-body-overflow");
+      $('.loadbox').remove()
+      return
+    }
+    $(document.body).toggleClass("html-body-overflow");
+    $('body').append('<div class="loadbox"><div class="dataload"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAEfUlEQVRoQ+2ajVFUMRDHdysQKlAqECsQKlAqECoQKhAqUCtQKxAqECoQKlA6gArW+TGbm1wueS/Ju3eiQ2aYAe69JP/9+O/Xqcy8zGxLRD6KyK6I/BaRI1W9m+tYnWvjsK+ZfRKR99E5l6q6P9e5mwD0S0RexABUdbZzuzY2My74BhNS1YshaZuZpZ8/KkBmhi/8EBF8g3WmqqclUP8CIC7/IQGwo6o4/MrqARSIRFWPWn2t2eTM7NhZKz6r6OidgBDanqrubQIQpoY2niWH7avqZXqBVkDunz9F5FVJ60MgmzXEZmaWMzsIYmcNgL6KyJ2qYgnNqwuQg0JLz5MTT1SVuLNYLRoyM0zsHJrvDb5TAL0Vke8JIDIACGKRCZgZvy+ZZ4m2zQxT+5YKpUVN3YBcS/jM6+TAz7G5mBkSJ2aFdauqS4HW9zoUkdPcZ5MAOWW+802QVjHvcgcmE4gX9r8d/uFxC1CY572IvC2QB/uQ560Qy1RAqJ3gyQIMUvtc2jSTq5U0sDUinF1VvW65PMJP91wyOXdKsoB0cRAOn6NlaBwNYHq3roGmi7WAcPOEPMjgt1MTTQGVYkw4k4sDLJsVtF6s9Xk3cYBASDcicpwKeYUU3Oah3tTZ4/Mxw7PWC/U+735NCUL8ww8BQrxaWUWWM7MH1snEmoW2VPWg95K175kZBMU9YEaE+GnIFwdp2yVDxE6T0Yf7zFkGuK8g1C8iciUihzWmXhWH3HYxwzieXPUkj7WacUD4NFlDNclUAYpiCuyCxqBz7Hi23kAL8PjZJkC9h2zyvSdAm5R2z1kPGnI2w+FXksZk04sWB+250NR3AqCVVtPAxiSQ2aA29TKl913gL8f2V9UrHcjfSu/PTtfpwR7kiUdjaz9oKFd9ll7+WxoifxtyiWtVPY99iKgcem0lMHR3JtUrYyKe+vkTbU+V4NzvP2nIzKiT7h9rPKrWkNM7ZURozx7AKnOakBebBHyaNVVV8iggLx0AAgvGi0PS/60Vn5mFNhlZPeULLbLBDH+swAMI5UKOzjelIbKSkCWgJXoaRcvIAjIzghjNiFwgq64e16UuzxTQUOjAojmArRR+uSZJOhMN96JFRVE3q9+M5HNpO4D+wkn8Tg5Q2t6ly8KLQ1M6TBKzoMlY5by92nOfxgxDV2ppjJMDFI9KvtWU2mZG0x4zXWnW11w8Sj6r80RnXbqtS9OOkg/RCqZHPSpt97d4CpEdfA0Bixr6CKRr0BX2H6XtMQmbWVxL3ahq6IsvXo3GmF9zc9OkhJkUDiYBykzySmPJhV8OzIbwizD1aNbyZA15FYl2QowqSjYKkMXmpDs7NAw1d3/bpFtDZhZLFCbEQUuj/VENIeFE49UEMUjbYz7jB+MnzJHCGvvyRS0gtI2WGI4hHAiiqZnZpaFkzEjARTtDk74qQC6s0M/mz0FB5YTfCygeBI+aRo0PxZeLnqdtRnyrXr2AkCI/NCZGv0/QAQjTY9/B0cnaNFQtLn+wFVDr/pNJofXA/xFQMNHzKV+qqBHkH5oPEpCmO9a4AAAAAElFTkSuQmCC" ></div></div>')
+  }
+  //work type
+  $('.type_btn').on('click','span',function () {
+    curTypeId = $(this).attr('curId');
+    $(this).addClass('type_active').siblings().removeClass('type_active');
+    $('#workTodo').html('');
+    $('.work_popup').remove();
+    popupCount = 0;
+    fullLoadData()
+    if(!isfirst){
+      dataArr.data = [];
+      mescroll.scrollTo(0,0);
+      mescroll.destroy();
+    }else{
+      isfirst = false
+    }
+    reFreshPull(function (mescroll) {
+      // get list
+      // $.ajax({
+      //   type:'POST',
+      //   url:'/api/worklist',
+      //   data:{categoryId:curTypeId,page:mescroll.optUp.page.num,limit:5},
+      //   success:function(req){
+      //     var str = '';
+      //     fullLoadData(true)
+      //     dataArr.data = dataArr.data.concat(req.list)
+      //     $.each(req.list,function (index,item) {
+      //       str += '<li case="'+item.caseId+'" '+(JSON.parse(item.imgUrls).length<=1?"class='work_no_more'":'')+'><img class="wow fadeIn" imgurl="http://www.admin.ccd-hk.com'+(JSON.parse(item.imgUrls).length>0?JSON.parse(item.imgUrls)[0].src:'/sdasd.png')+'"  src="/img/loading.gif" alt=""><p class="wow fadeInLeft">'+item.title+'</p></li>'
+      //     })
+      //     $('#workTodo').append(str)
+      //     mescroll.endByPage(req.list.length, req.pages)
+      //   }
+      // })
+      var req = {
+        "totals": 43,
+        "list": [
+          {
+            "caseId": 198,
+            "title": "成都木棉花酒店",
+            "enTitle": "MUMIAN CHENGDU",
+            "sort": 0,
+            "categoryId": 4,
+            "typeName": "酒店",
+            "content": "",
+            "enContent": "",
+            "isPublish": 1,
+            "creator": "30",
+            "createDate": "2023-07-31 18:29:43",
+            "lastUpdateBy": "30",
+            "lastUpdateDate": "2023-07-31 18:29:43",
+            "imgUrls": "[{\"imgId\":\"568d93f2-f2f4-42e5-ba3b-2970e933cf83\",\"src\":\"/ccd/2023/7/568d93f2-f2f4-42e5-ba3b-2970e933cf83.jpg\",\"name\":\"A-1.jpg\",\"length\":\"465945\"},{\"imgId\":\"77699b20-2698-40ae-a339-a27109edb72a\",\"src\":\"/ccd/2023/7/77699b20-2698-40ae-a339-a27109edb72a.jpg\",\"name\":\"D1-4.jpg\",\"length\":\"549518\"},{\"imgId\":\"cba28d58-af72-4919-9fba-6985b648235e\",\"src\":\"/ccd/2023/7/cba28d58-af72-4919-9fba-6985b648235e.jpg\",\"name\":\"B-2.jpg\",\"length\":\"651573\"},{\"imgId\":\"03410d14-d6e6-404e-b771-0a9f749f65d4\",\"src\":\"/ccd/2023/7/03410d14-d6e6-404e-b771-0a9f749f65d4.jpg\",\"name\":\"B-4.jpg\",\"length\":\"419363\"},{\"imgId\":\"3ef02812-19a9-4584-abcf-8002942cc0d6\",\"src\":\"/ccd/2023/7/3ef02812-19a9-4584-abcf-8002942cc0d6.jpg\",\"name\":\"G-2.jpg\",\"length\":\"642354\"},{\"imgId\":\"5c63b786-a723-423a-9505-4829090f3b05\",\"src\":\"/ccd/2023/7/5c63b786-a723-423a-9505-4829090f3b05.jpg\",\"name\":\"G-7.jpg\",\"length\":\"525370\"},{\"imgId\":\"afd5febd-c2fd-47de-a30f-a2b219713d27\",\"src\":\"/ccd/2023/7/afd5febd-c2fd-47de-a30f-a2b219713d27.jpg\",\"name\":\"G-4.jpg\",\"length\":\"678511\"},{\"imgId\":\"3c313e3e-af78-4d9d-ab26-368461ce6461\",\"src\":\"/ccd/2023/7/3c313e3e-af78-4d9d-ab26-368461ce6461.jpg\",\"name\":\"E-2.jpg\",\"length\":\"1286569\"},{\"imgId\":\"4744ccb9-7d2a-490a-be59-2d45517d9fe8\",\"src\":\"/ccd/2023/7/4744ccb9-7d2a-490a-be59-2d45517d9fe8.jpg\",\"name\":\"D2-3.jpg\",\"length\":\"737731\"},{\"imgId\":\"20e7af10-1237-49bf-80cf-d45fd3b3bfd1\",\"src\":\"/ccd/2023/7/20e7af10-1237-49bf-80cf-d45fd3b3bfd1.jpg\",\"name\":\"G-9.jpg\",\"length\":\"703645\"},{\"imgId\":\"c28d1631-cdfb-472b-aad7-3fddf4f716b3\",\"src\":\"/ccd/2023/7/c28d1631-cdfb-472b-aad7-3fddf4f716b3.jpg\",\"name\":\"H2-4.jpg\",\"length\":\"1130277\"}]"
+          },
+          {
+            "caseId": 199,
+            "title": "隱廬·桂裡泊院",
+            "enTitle": "YIN LU HOTEL",
+            "sort": 0,
+            "categoryId": 4,
+            "typeName": "酒店",
+            "content": "",
+            "enContent": "",
+            "isPublish": 1,
+            "creator": "30",
+            "createDate": "2023-10-16 17:55:41",
+            "lastUpdateBy": "30",
+            "lastUpdateDate": "2023-10-16 18:01:56",
+            "imgUrls": "[{\"imgId\":\"6f07a533-4565-42e2-bd0b-4278a9e4745c\",\"src\":\"/ccd/2023/10/6f07a533-4565-42e2-bd0b-4278a9e4745c.webp\",\"name\":\"DSCF8638.webp\",\"length\":\"530212\"},{\"imgId\":\"ce49a8f3-e6b0-481b-aa91-4f6cff33306f\",\"src\":\"/ccd/2023/10/ce49a8f3-e6b0-481b-aa91-4f6cff33306f.webp\",\"name\":\"DSCF8034.webp\",\"length\":\"586050\"},{\"imgId\":\"4e8af9c3-9ce2-4395-871a-3d87fcd1ee6f\",\"src\":\"/ccd/2023/10/4e8af9c3-9ce2-4395-871a-3d87fcd1ee6f.webp\",\"name\":\"DSCF8051副本.webp\",\"length\":\"773122\"},{\"imgId\":\"a2c87a56-75b8-4f6b-b5bc-65b8338558b2\",\"src\":\"/ccd/2023/10/a2c87a56-75b8-4f6b-b5bc-65b8338558b2.webp\",\"name\":\"DSCF9083.webp\",\"length\":\"741450\"},{\"imgId\":\"e19a6207-dcce-4ed6-afe1-13661191affd\",\"src\":\"/ccd/2023/10/e19a6207-dcce-4ed6-afe1-13661191affd.webp\",\"name\":\"DSCF9074.webp\",\"length\":\"1059142\"},{\"imgId\":\"126b5b5b-3b6f-4027-b231-08b54303fd45\",\"src\":\"/ccd/2023/10/126b5b5b-3b6f-4027-b231-08b54303fd45.webp\",\"name\":\"DSCF8774.webp\",\"length\":\"1340716\"}]"
+          },
+          {
+            "caseId": 200,
+            "title": "廣州文華東方酒店",
+            "enTitle": "Mandarin Oriental, Guangzhou",
+            "sort": 0,
+            "categoryId": 4,
+            "typeName": "酒店",
+            "content": "",
+            "enContent": "",
+            "isPublish": 1,
+            "creator": "30",
+            "createDate": "2023-12-19 11:45:53",
+            "lastUpdateBy": "30",
+            "lastUpdateDate": "2023-12-19 11:47:32",
+            "imgUrls": "[{\"imgId\":\"c676886e-a49f-425c-8f59-fb44bcd7b864\",\"src\":\"/ccd/2023/12/c676886e-a49f-425c-8f59-fb44bcd7b864.png\",\"name\":\"QIN05795.png\",\"length\":\"680260\"},{\"imgId\":\"b01d9214-a1ef-48a6-bb4d-d615c9950da1\",\"src\":\"/ccd/2023/12/b01d9214-a1ef-48a6-bb4d-d615c9950da1.png\",\"name\":\"image-5.png\",\"length\":\"1409587\"},{\"imgId\":\"277857cf-c09d-4b9e-82ea-d7cbeac5b8e2\",\"src\":\"/ccd/2023/12/277857cf-c09d-4b9e-82ea-d7cbeac5b8e2.png\",\"name\":\"image-13切.png\",\"length\":\"1043373\"}]"
+          },
+          {
+            "caseId": 93,
+            "title": "北京前門文華東方酒店",
+            "enTitle": "Mandarin Oriental Beijing",
+            "sort": 1,
+            "categoryId": 4,
+            "typeName": "酒店",
+            "content": "<p></p><p class=\"MsoNormal\"><span>北京前门文华东方酒店坐落于前门东区胡同，紧邻故宫及核心商务区。潜入四合秘境，在古老的四合院建筑空间里探索东方美学，让最尊崇的古老东方高尚生活方式与最朴实无华的市井民俗风物相依共存，用最真实也最放松的“相伴”开启探访北京皇城深巷的时空旅行。酒店的各种功能区分布于前门东区胡同各处，巧妙隐匿于私人传统住宅、各式零售店、餐厅、酒吧和文化场所之中，将是一家十分值得期待的奢华酒店。</span></p><p></p>",
+            "enContent": "<p></p><p class=\"MsoNormal\"><span lang=\"EN-US\">Beijing Qianmen Mandarin Oriental Hotel is\r\nlocated in Hutong, Qianmen East District, close to the Forbidden City and the\r\ncore business district. It is built to explore the oriental\r\naesthetics in the ancient courtyard space, and to let the most respected\r\nancient oriental noble lifestyle coexist with the most unpretentious city folk\r\ncustoms, openning the most authentic and relaxed travel experience to visitors. The hotel's\r\nvarious functional areas are located in different part of the Hutong in ​​Qianmen East, and\r\nare cleverly concealed in private traditional residences, various retail\r\nstores, restaurants, bars and cultural venues. It will be a luxury hotel worth\r\nlooking forward to.<o:p></o:p></span></p><br><p></p>",
+            "isPublish": 1,
+            "creator": "28",
+            "createDate": "2019-04-15 18:14:48",
+            "lastUpdateBy": "30",
+            "lastUpdateDate": "2019-08-15 15:12:26",
+            "imgUrls": "[{\"imgId\":\"cfd5cbf5-9ece-456e-8097-5d188dc3a905\",\"src\":\"/ccd/2019/5/cfd5cbf5-9ece-456e-8097-5d188dc3a905.png\",\"name\":\"企业微信截图_15578865684391.png\",\"length\":\"380653\"},{\"imgId\":\"b9f5b568-d519-44f6-b2bf-3afdd4e2c80b\",\"src\":\"/ccd/2019/5/b9f5b568-d519-44f6-b2bf-3afdd4e2c80b.jpg\",\"name\":\"61248.jpg\",\"length\":\"253750\"}]"
+          },
+          {
+            "caseId": 169,
+            "title": "南京蘇寧鐘山國際高爾夫酒店",
+            "enTitle": "Suning Zhongshan International Golf Hotel",
+            "sort": 1,
+            "categoryId": 4,
+            "typeName": "酒店",
+            "content": "",
+            "enContent": "",
+            "isPublish": 1,
+            "creator": "30",
+            "createDate": "2021-08-05 15:28:06",
+            "lastUpdateBy": "30",
+            "lastUpdateDate": "2023-04-27 18:44:34",
+            "imgUrls": "[{\"imgId\":\"a8149b23-f50d-4192-b529-0981e98abc0c\",\"src\":\"/ccd/2023/4/a8149b23-f50d-4192-b529-0981e98abc0c.webp\",\"name\":\"14 拱形通道.webp\",\"length\":\"103666\"},{\"imgId\":\"c0cf44fa-a58b-4a30-a0a6-1ca8dfe6c20d\",\"src\":\"/ccd/2023/4/c0cf44fa-a58b-4a30-a0a6-1ca8dfe6c20d.webp\",\"name\":\"01酒店外景.webp\",\"length\":\"977602\"},{\"imgId\":\"8cb60576-d357-4e66-afc3-364ac96eaacd\",\"src\":\"/ccd/2023/4/8cb60576-d357-4e66-afc3-364ac96eaacd.webp\",\"name\":\"16 全日餐厅.webp\",\"length\":\"771236\"},{\"imgId\":\"52bdcaf4-7e48-44ba-8f60-ee261333b076\",\"src\":\"/ccd/2023/4/52bdcaf4-7e48-44ba-8f60-ee261333b076.webp\",\"name\":\"06 酒店连廊.webp\",\"length\":\"858200\"}]"
+          }
+        ],
+        "pages": 9,
+        "code": 200
+      };
+
+      var str = '';
+      fullLoadData(true)
+      dataArr.data = dataArr.data.concat(req.list)
+      $.each(req.list,function (index,item) {
+        str += '<li case="'+item.caseId+'" '+(JSON.parse(item.imgUrls).length<=1?"class='work_no_more'":'')+'><img class="wow fadeIn" imgurl="http://www.admin.ccd-hk.com'+(JSON.parse(item.imgUrls).length>0?JSON.parse(item.imgUrls)[0].src:'/sdasd.png')+'"  src="/img/loading.gif" alt=""><p class="wow fadeInLeft">'+item.title+'</p></li>'
+      })
+      $('#workTodo').append(str)
+      mescroll.endByPage(req.list.length, req.pages)
+
+    })
+  })
+
+  $('.type_btn span:first').click()
+
+  /*上下拉刷新*/
+  function reFreshPull(upFunc) {
+    dataArr = {
+      data:[]
+    }
+    //创建MeScroll对象
+    mescroll = new MeScroll("mescroll", {
+      down:{
+        use:false
+      },
+      up: {
+        auto:true,//初始化完毕,是否自动触发上拉加载的回调
+        isBoth: false, //上拉加载时,如果滑动到列表顶部是否可以同时触发下拉刷新;默认false,两者不可同时触发; 这里为了演示改为true,不必等列表加载完毕才可下拉;
+        callback: upCallback, //上拉加载的回调
+        isBounce: false, //此处禁止ios回弹
+        page:{
+          num : 0 ,
+          size : 5
+        },
+        offset:50,
+        htmlNodata:'<p class="upwarp-nodata" style="font-size: 0.469rem;-webkit-text-fill-color: #000;">没有更多数据</p>',
+        loadFull:{
+          use : true ,
+          delay : 200
+        },
+        htmlLoading:'<img class="upwarp-progress" src="/img/loading.gif"/>',
+        lazyLoad: {
+          use: true // 是否开启懒加载,默认false
+        }
+
+      }
+    });
+    /*下拉刷新的回调 */
+    function upCallback(page){
+      if(mescroll.optUp.page.num == 1){
+        mescroll.hideUpScroll();
+      }else{
+        mescroll.showUpScroll();
+      }
+      upFunc(mescroll)
+    }
+  }
+
+  //scroll
+
+  function popupScroll(id) {
+    var scroll = 'mescroll'+id
+    scroll = new MeScroll("mescroll"+id, {
+      down:{
+        use:false,
+      },
+      up: {
+        lazyLoad: {
+          use: true // 是否开启懒加载,默认false
+        }
+
+      }
+    });
+    scroll.lazyLoad()
+  }
+
+  $('#workTodo').on('click','li',function () {
+    if($(this).hasClass('work_no_more')){
+      return false
+    }
+    if($(this).attr('finish')){
+      $('.work_popup').hide()
+      $('.work_popup').eq($(this).attr('finish')).show()
+      $('.work_popup').eq($(this).attr('finish')).on('touchmove', function (event) {
+        event.preventDefault();
+      });
+      return false
+    }
+
+    $(this).attr('finish',popupCount)
+    getWorkCase($(this).attr('case'),popupCount)
+    ++popupCount
+
+  })
+
+  $('.works').on('click','.popup_close',function (e) {
+    e.stopPropagation()
+    $('.work_popup').hide()
+    $('#workTodo').off('touchmove');
+  })
+
+  var wow = new WOW(
+    {
+      boxClass:     'wow',
+      animateClass: 'animated',
+      offset:       0,
+      mobile:       true,
+      live:true,
+      scrollContainer: '.mescroll'
+    }
+  )
+  wow.init();
+</script>
+<script>
+  var wow = new WOW(
+    {
+      boxClass:     'wow',
+      animateClass: 'animated',
+      offset:       0,
+      mobile:       true,
+      live:true,
+    }
+  )
+  wow.init();
+</script>
+</body>
+</html>

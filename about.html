@@ -1,0 +1,319 @@
+
+<html lang="en">
+<head>
+  <title>Notus</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+  <meta name="renderer" content=webkit />
+  <meta name="description" content="notus">
+  <meta name="keywords" content="notus">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no">
+  <script src="/js/hotcss.js"></script>
+  <link rel="stylesheet" href="/css/wap.css?v=119944">
+  <link rel="stylesheet" href="/css/animate.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/wow.js"></script>
+  <script>
+    // var _hmt = _hmt || [];
+    // (function() {
+    //   var hm = document.createElement("script");
+    //   hm.src = "https://hm.baidu.com/hm.js?e8a03d99c7fed4f4a5c36d738ebe0c94";
+    //   var s = document.getElementsByTagName("script")[0];
+    //   s.parentNode.insertBefore(hm, s);
+    // })();
+  </script>
+  <link rel="stylesheet" href="/css/swiper.min.css">
+  <script src="/js/swiper.min.js"></script>
+</head>
+<body>
+<div class="bar">
+  <img src="/img/menu.png" class="menu">
+  <div class="language">
+<!--    <span  lagua="cn">中</span>-->
+    <span class="active" lagua="en">EN</span>
+  </div>
+</div>
+<div class="mask animated">
+  <div class="popup">
+    <img src="/img/closed.png" class="closed">
+    <div class="poto">
+      <a class="" href="/wap">HOME</a>
+      <a class="active" href="/wap/about">ABOUT</a>
+      <a class="" href="/wap/works">WORKS</a>
+      <a class="" href="/wap/contact">CONTACT</a>
+    </div>
+    <p class="language">
+<!--      <span  lagua="cn">中</span>-->
+      <span class="active" lagua="en">EN</span>
+    </p>
+    <img src="/img/qr.png" class="ewm">
+    <div class="share">
+      <a class="face" href="#"></a>
+      <a class="ins" href="#"></a>
+      <a class="wechat"></a>
+      <a class="weibo" href="#"></a>
+    </div>
+  </div>
+</div>
+<script>
+  function setCookie(name,value){
+    var Days = 30;
+    var exp = new Date();
+    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+  }
+  $('.menu').click(function () {
+    $('.mask').removeClass('slideOutUp').addClass('slideInDown').show()
+    $('.mask').on('touchmove', function (event) {
+      event.preventDefault();
+    });
+  })
+  $('.closed').click(function () {
+    $('.mask').addClass('slideOutUp').removeClass('slideInDown')
+    $('.mask').off('touchmove', function (event) {
+      event.preventDefault();
+    });
+  })
+
+  $('.language').on('click','span',function() {
+    $(this).addClass('active').removeClass()
+    setCookie('language',$(this).attr('lagua'))
+    location.reload()
+  })
+
+
+</script>
+<div class="content">
+  <div class="message">
+    <div class="title animated fadeInLeft"><img src="/img/tline.png" alt="">Profile</div>
+    <div class="company animated fadeInUp">
+      <p class="MsoNormal"><span><o:p></o:p></span></p><p class="MsoNormal"><span><font face="Times New Roman">CCD is one of the internationally renowned hotel interior design agencies.</font></span><span>CCD</span><span>&nbsp;is ranked as #</span><span><font face="PMingLiU">1</font></span><span>&nbsp;in </span><span><font face="PMingLiU">TOP</font></span><span>&nbsp;10 Hospitality in US Interior Design </span><span><font face="PMingLiU">M</font></span><span>agazine in </span><span><font face="PMingLiU">2022.</font></span><font face="Times New Roman">CCD </font>received&nbsp;<font face="Times New Roman">the "Top 500 Asian Brands" for two consecutive years in 2019 and 2020</font><font face="Times New Roman">.In 2020, it was ranked in "China's 500 Most Valuable Brands", becoming the first and only design brand on the list.</font><font face="Times New Roman">Since&nbsp;establishment,&nbsp;CCD&nbsp;has&nbsp;received&nbsp;over&nbsp;91&nbsp;top notched&nbsp;international&nbsp;design&nbsp;awards&nbsp;including&nbsp;the&nbsp;highest&nbsp;honor&nbsp;in&nbsp;the&nbsp;interior&nbsp;design&nbsp;field&nbsp;</font><font face="Times New Roman">Gold&nbsp;Key&nbsp;</font></p><p class="MsoNormal"><font face="Times New Roman">Awards</font><font face="Times New Roman">.CCD&nbsp;</font><span>has&nbsp;always&nbsp;been&nbsp;the&nbsp;icon&nbsp;in&nbsp;the&nbsp;hospitality&nbsp;design&nbsp;field,&nbsp;with&nbsp;the&nbsp;whole&nbsp;industry&nbsp;</span><span>chain&nbsp;operation&nbsp;mode&nbsp;(pre consultant,&nbsp;architectural&nbsp;design,&nbsp;interior&nbsp;design,&nbsp;to&nbsp;electromechanical,&nbsp;lighting,&nbsp;logo,softcover,&nbsp;art,&nbsp;etc.)&nbsp;</span></p><p class="MsoNormal"><span>covering&nbsp;hotel,&nbsp;corporate,&nbsp;commercial&nbsp;complex,&nbsp;and&nbsp;high-end&nbsp;residential&nbsp;design.&nbsp;</span></p>
+    </div>
+  </div>
+  <div class="swiper-container animated fadeIn delay-900ms" id="swiper1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="http://www.admin.ccd-hk.com/ccd/2020/12/0ee6f591-c4b6-4667-8e60-30d19773e8d7.png" ></div>
+      <div class="swiper-slide"><img src="http://www.admin.ccd-hk.com/ccd/2020/12/24c265c6-40e1-4fec-ba60-336867dfdc4b.png" ></div>
+      <div class="swiper-slide"><img src="http://www.admin.ccd-hk.com/ccd/2020/12/33b0fea6-b643-4cf0-9c43-29fd15f226fd.png" ></div>
+      <div class="swiper-slide"><img src="http://www.admin.ccd-hk.com/ccd/2020/12/c849146e-bc7e-4e15-a14c-e7195f3f5223.png" ></div>
+      <div class="swiper-slide"><img src="http://www.admin.ccd-hk.com/ccd/2020/12/fc6eff19-e1a3-4702-aba0-4dadb604c07d.png" ></div>
+      <div class="swiper-slide"><img src="http://www.admin.ccd-hk.com/ccd/2020/12/40de5318-1018-40f3-b880-2410182e7c72.png" ></div>
+      <div class="swiper-slide"><img src="http://www.admin.ccd-hk.com/ccd/2020/12/0c7721d7-52b6-48b7-869a-d1e3053490f9.png" ></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper-container" id="swiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="message boss_msg " >
+          <div class="title "><img src="/img/tline.png" alt="">Chairman / Founder</div>
+          <div class="company">
+            <h1 class="boss">Joe Cheng</h1>
+            <div class="msg"><p></p><p class="MsoNormal"><span lang="EN-US">Founder of&nbsp;</span><span>Cheng Chung Design (HK) Co., Ltd.</span>&nbsp;, Mr. Joe Cheng has been called ‘Mr. Fashion’
+              in the capital market, and served as CTBUH’s first jury chair for the category
+              of interior design. He has also been honored numerous titles such as UN
+              cultural ambassador, Chinese Design of the Year, member of Hall of Fame and so
+              on. With his design concept of Eastern artistic conception in the Western form’,
+              which has become popular around the world, he has received over 90 top-notched
+              international design awards including the highest honor in the interior design
+              field – ‘ Gold Key Awards’.&nbsp;<span>CCD</span><span>&nbsp;is ranked as #</span><span><font face="PMingLiU">1</font></span><span>&nbsp;in </span><span><font face="PMingLiU">TOP</font></span><span>&nbsp;10 Hospitality in US Interior Design </span><span><font face="PMingLiU">M</font></span><span>agazine in </span><span><font face="PMingLiU">2022.</font></span>CCD received the "Asian 500" honor last year and 'Top 500 Most Influential Brand in China' this year, it is the first design brand on the two lists.</p><p></p></div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="message boss_msg " >
+          <div class="title "><img src="/img/tline.png" alt="">President / Principal Partner</div>
+          <div class="company">
+            <h1 class="boss">Ken Hu</h1>
+            <div class="msg"><p></p><p class="MsoNormal"><span lang="EN-US">Ken has worked in the architecture and
+design industry for over 35 years.<o:p></o:p></span><span>Master of Architecture in South China University of Technology, under the tutelage of the famous architect Mo Bozhi, researched on Chinese traditional courtyard and modern architectural design, and completed many award-winning works in the Design and Research Institute of South China University of Technology. In 1993, he joined the HBA Los Angeles headquarters for 15 years and became a partner of the HBA. Until 2008, he returned to China and became a partner of CCD. Together with Mr. Joe Cheng, he brought CCD from China to a more globalized platform and completed more than one hundred international hotel projects. From architects to interior design, from Chinese local traditions to Western design culture, these rich learning and overseas work experience have enabled him to form a unique personal insight and international vision, which always endows the project with unique innovation</span></p><p class="MsoNormal"><span><o:p></o:p></span></p><br><p></p></div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="message boss_msg " >
+          <div class="title "><img src="/img/tline.png" alt="">Executive Vice President / Managing Partner / Design Director</div>
+          <div class="company">
+            <h1 class="boss">Ray Chuang </h1>
+            <div class="msg"><p></p><p class="MsoNormal">Ray has nearly 17 years of experience in hotel interior design, many international well-known hotel projects were designed by him. His professional training and solid projectmanagement experience has provided him a comprehensive knowledge of each process, from architectures to interior design. Besides, he has a background in Fine Art. He has artistic design sense and international experience to generate creative design concept and pay great tribute to the project. Prior to Joining CCD, he graduated from Fashion Institute of Technology with BFA degree in Interior Design major in New York，worked with internationally esteemed design firms in New York after graduation, such as Rockwell Group, and Jeffrey Beers International, etc.</p><p class="MsoNormal"><br></p><br><p></p></div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="message boss_msg " >
+          <div class="title "><img src="/img/tline.png" alt="">Senior Vice President / Managing Partner / Design Director</div>
+          <div class="company">
+            <h1 class="boss">Andy Li</h1>
+            <div class="msg"><p>Andy Li has been engaged in interior design for more than ten years.During his time at CCD,he went from being anordinary designer to a senior vice president / principal partner / design director. with the development of the company, Andy Li has completed many international brand hotels and and residences and other top design projects, served domestic real estate enterprises, accumulated rich experience in design project management and team management. He is good at interpreting a completeinterior architectural design from the perspectives of architecture, garden and art,and follows the lifebehavior of people to shape the diversity of space functions, so as to achieve the harmony between people and the space.</p></div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="swiper-pagination pagination"></div>
+  </div>
+
+  <div class="swiper-container" id="swiper3">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-no-swiping">
+        <img src="http://www.admin.ccd-hk.com/ccd/2019/11/90d69c92-2d17-4bb8-bc6a-054e8472b643.jpg" class="bossshow">
+      </div>
+      <div class="swiper-slide swiper-no-swiping">
+        <img src="http://www.admin.ccd-hk.com/ccd/2019/5/766c3d1b-3621-4bdb-907b-b7cb697939a0.jpg" class="bossshow">
+      </div>
+      <div class="swiper-slide swiper-no-swiping">
+        <img src="http://www.admin.ccd-hk.com/ccd/2021/5/b7c47a14-9664-4133-b103-7eb35f91c92a.png" class="bossshow">
+      </div>
+      <div class="swiper-slide swiper-no-swiping">
+        <img src="http://www.admin.ccd-hk.com/ccd/2021/5/efcc6d19-37b3-468d-801d-f720c0f65ffd.png" class="bossshow">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="message">
+    <div class="title wow fadeInLeft"><img src="/img/tline.png" alt="">Partner</div>
+    <div class="type_btn" id="parType">
+      <span class="type_active" type="0">Hotel brand</span>
+      <span type="1">Developer</span>
+    </div>
+    <ul class="brand_list" id="partnerList">
+      <li class="wow fadeInLeft" data-wow-delay="0.02s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/700d910a-373d-4c31-bc3a-9c02bb554e17.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.04s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/68011a47-5461-4a73-989a-88898e66b041.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.06s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/84dfc732-60c5-4430-8228-4e7042b05da8.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.08s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/e34d24b3-11b5-4405-8e10-94b691271bb1.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.1s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/254e3154-4234-4001-8fe2-cb27b444ea02.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.12s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/7208b6b4-a573-4fcb-a400-fa1011a3f953.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.14s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/712b355b-3ddc-4886-acd9-e59d2e99f35c.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.16s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/23e04be6-7c47-48ac-9918-350e0797ef26.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.18s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/ff31fb94-1e4c-4011-9b8c-168cf0e9297c.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.2s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/55af563d-df6e-4dba-8dc6-0298726d1435.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.22s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/8ac43428-fc7c-4f9e-a769-1892655eda23.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.24s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/dad8631e-9668-43f3-9a9f-713c23342c7e.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.26s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/459de005-8d1a-4222-bd31-e39f2726b087.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.28s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/bd06ed30-7793-4596-b435-ee0c8517574f.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.3s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/c275fe26-2a05-4720-b1ae-5f8eae6fa65f.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.32s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/9b7651c1-3871-4642-815b-c6c3f9d7b530.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.34s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/40719a6e-31c9-436c-8bbf-401c1329a41c.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.36s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/a230e757-09da-420d-8cfd-cd56ace06bf5.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.38s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/a62176f9-a091-4992-bf07-3b92bc32bc4f.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.4s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/0e855984-a2db-4244-8bef-1f9b11fcb082.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.42s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/f0919ca1-031b-4b72-bc8d-d5ac9c6b3116.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.44s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/4855c7e7-daf5-45f3-a32f-8f6ecb744599.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.46s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/29d5bf9e-a132-4fc1-a42f-bff52415598b.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.48s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/fde119e3-7aad-471a-bb0e-5dd688854fd6.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.5s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/4938a42a-3f48-46ed-b120-61041ac179cf.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.52s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/b8b8f55b-cf21-48d9-9863-787822f9e0e6.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.54s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/bceeb8c0-e5db-48de-b8fa-a81068e33a33.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.56s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/ed2d907c-793a-4b1d-8b6d-c7266801e3ce.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.58s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/35773ddd-299b-43d7-a212-520dd6a2c878.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.6s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/102b61ec-6237-47d7-9697-bbe8fe370438.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.62s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/d3b490dc-20c1-4105-8ed2-49207c679f66.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.64s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/4f45ebb0-2190-4be0-a6af-b40d18fd185c.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.66s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/737f2671-81f9-4f1e-a0a5-f7f9df95e7c3.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.68s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/42c3b3a5-7e6e-4128-bafa-29d94bc810bd.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.7000000000000001s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/93d65516-ed07-479f-ae85-095b634d3611.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.72s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/416f9cc6-47c4-4e81-9084-1cff4a99d40a.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.74s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/ae741f22-cd58-45c3-8705-6545d685ec27.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.76s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/979df9be-ad1a-4104-8ebb-c7fc3d6de219.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.78s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/0ac8f485-1d8b-4e47-aa82-2173bb62c1b4.jpg"></li>
+      <li class="wow fadeInLeft" data-wow-delay="0.8s"><img src="http://www.admin.ccd-hk.com/ccd/2019/5/f58970a5-6c69-4589-ab98-51aa4a65744d.jpg"></li>
+    </ul>
+  </div>
+</div>
+<script>
+
+  var mySwiper = new Swiper ('#swiper1', {
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    }
+  })
+  var mySwiper3 = new Swiper ('#swiper3', {
+    loop:true,
+    slidesPerView :'auto',
+    centeredSlides:true,
+  })
+
+  var mySwiper2 = new Swiper ('#swiper2', {
+    autoplay: {
+      delay: 4000,
+    },
+    loop:true,
+    centeredSlides:true,
+    slidesPerView :'auto',
+    pagination: {
+      el: '.pagination',
+    },
+    on:{
+      slideChangeTransitionStart: function(){
+        mySwiper3.slideTo(this.activeIndex)
+        // $('.bossshow').removeClass('animated fadeInRight fadeInLeft fast')
+        // //$('.boss_msg').removeClass('animated fadeInRight fadeInLeft')
+        // $('.bossshow').eq(this.realIndex).css('display','block').siblings('.bossshow').css('display','none')
+        // $('.bossshow').eq(this.realIndex).addClass('animated fadeIn fast')
+      },
+      // slideNextTransitionStart: function () {
+      //     mySwiper3.slideTo(this.activeIndex)
+      //     //$('#swiper2 .swiper-slide').eq(this.activeIndex).find('img').addClass('animated fadeInRight delay-900ms')
+      //     //$('#swiper2 .swiper-slide').eq(this.activeIndex).find('.boss_msg').addClass('animated fadeInRight')
+      // },
+      // slidePrevTransitionStart: function () {
+      //     mySwiper3.slideTo(this.activeIndex)
+      //     //$('#swiper2 .swiper-slide').eq(this.activeIndex).find('img').addClass('animated fadeInLeft delay-900ms')
+      //     //$('#swiper2 .swiper-slide').eq(this.activeIndex).find('.boss_msg').addClass('animated fadeInLeft')
+      // }
+    }
+  })
+
+
+
+
+  //aboutus partner
+  function getParterList(type) {
+    $('#partnerList').find('li').removeClass('wow animated fadeInLeft')
+    $.ajax({
+      type:'POST',
+      url:'/api/parterList',
+      data:{partnerType:type},
+      success:function(req){
+        var str = '';
+        $.each(req,function (index,item) {
+          str += '<li data-wow-delay="'+((index+1)*0.02)+'s"><img src="http://www.admin.ccd-hk.com'+JSON.parse(item.imgHUrl).src+'"></li>'
+        })
+        $('#partnerList').html(str).find('li').addClass('wow animated fadeInLeft')
+      }
+
+    })
+  }
+
+  //aboutus partner  type
+  $('#parType').on('click','span',function () {
+    $(this).addClass('type_active').siblings('span').removeClass('type_active')
+    getParterList($(this).attr('type'))
+  })
+
+
+  // $(function () {
+  //     $('#curcompany p').animate({
+  //         'height':'12.8rem'    //     },2000)
+  //   })
+</script>
+<script>
+  var wow = new WOW(
+    {
+      boxClass:     'wow',
+      animateClass: 'animated',
+      offset:       0,
+      mobile:       true,
+      live:true,
+    }
+  )
+  wow.init();
+</script>
+</body>
+</html>

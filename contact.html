@@ -1,0 +1,199 @@
+
+<html lang="en">
+<head>
+  <title>Notus</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+  <meta name="renderer" content=webkit />
+  <meta name="description" content="notus">
+  <meta name="keywords" content="notus">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no">
+  <script src="/js/hotcss.js"></script>
+  <link rel="stylesheet" href="/css/wap.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/wow.js"></script>
+  <script>
+    // var _hmt = _hmt || [];
+    // (function() {
+    //   var hm = document.createElement("script");
+    //   hm.src = "https://hm.baidu.com/hm.js?e8a03d99c7fed4f4a5c36d738ebe0c94";
+    //   var s = document.getElementsByTagName("script")[0];
+    //   s.parentNode.insertBefore(hm, s);
+    // })();
+  </script>
+  <style>
+    .bar{
+      background: transparent!important;
+    }
+  </style>
+</head>
+<body>
+<div class="bar">
+  <img src="/img/menu.png" class="menu">
+  <div class="language">
+<!--    <span  lagua="cn">中</span>-->
+    <span class="active" lagua="en">EN</span>
+  </div>
+</div>
+<div class="mask animated">
+  <div class="popup">
+    <img src="/img/closed.png" class="closed">
+    <div class="poto">
+      <a class="" href="/wap">HOME</a>
+      <a class="" href="/wap/about">ABOUT</a>
+      <a class="" href="/wap/works">WORKS</a>
+      <a class="active" href="/wap/contact">CONTACT</a>
+    </div>
+    <p class="language">
+<!--      <span  lagua="cn">中</span>-->
+      <span class="active" lagua="en">EN</span>
+    </p>
+    <img src="/img/qr.png" class="ewm">
+    <div class="share">
+      <a class="face" href="#"></a>
+      <a class="ins" href="#"></a>
+      <a class="wechat"></a>
+      <a class="weibo" href="#"></a>
+    </div>
+  </div>
+</div>
+<script>
+  function setCookie(name,value){
+    var Days = 30;
+    var exp = new Date();
+    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+  }
+  $('.menu').click(function () {
+    $('.mask').removeClass('slideOutUp').addClass('slideInDown').show()
+    $('.mask').on('touchmove', function (event) {
+      event.preventDefault();
+    });
+  })
+  $('.closed').click(function () {
+    $('.mask').addClass('slideOutUp').removeClass('slideInDown')
+    $('.mask').off('touchmove', function (event) {
+      event.preventDefault();
+    });
+  })
+
+  $('.language').on('click','span',function() {
+    $(this).addClass('active').removeClass()
+    setCookie('language',$(this).attr('lagua'))
+    location.reload()
+  })
+
+
+</script>
+<div class="mbrands">
+  <div class="title animated fadeInLeft"><img src="/img/tline.png" alt="">Sub-Brands</div>
+  <ul class="mbrans_ul">
+    <li>
+      <img src="/img/mbrands1.png" alt="">
+      <span>FED</span>
+    </li>
+    <li>
+      <img src="/img/mbrands2.png" alt="">
+      <span>UCD</span>
+    </li>
+    <li>
+      <img src="/img/mbrands3.png" alt="">
+      <span>CAC</span>
+    </li>
+    <li>
+      <img src="/img/mbrands4.png" alt="">
+      <span>XIZHAO</span>
+    </li>
+  </ul>
+</div>
+
+<div class="content content-contact">
+  <div class="message">
+    <div class="title animated fadeInLeft"><img src="/img/tline.png" alt="">Contact</div>
+
+    <div class="animated fadeInDown">
+      <h1 class="t_title">Shenzhen (Futian)</h1>
+      <p>Floor 48, 49, 53A, 53B, International Chamber of Commerce Tower, No.168 Fuhua 3rd Road, CBD Futian District, Shenzhen </p>
+      <p class="tel">Tel：+ 86 755 2399 4999</p>
+      <p>Fax：+ 86 755 8384 9557</p><br>
+      <p>Business Consulting：+ 86 755 8384 9557</p>
+      <P>development@ccd.com.hk</P>
+    </div>
+
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+      <h1 class="t_title">Hong Kong</h1>
+      <p>27F,CNT TOWER.NO.338 HENNESSY RD,WAN CHAI,HONG KONG</p>
+      <p class="tel">Tel：+ 852 2548 2009</p>
+      <p>Fax：+ 852 2548 2089</p><br>
+      <p>Business Consulting：+ 86 755 8384 9557</p>
+      <P>development@ccd.com.hk</P>
+    </div>
+
+    <div class="wow fadeInDown" data-wow-delay="1s">
+      <h1 class="t_title">Shanghai</h1>
+      <p>4F, TOWER 2, YONGJIATING, 570 YONGJIA ROAD, XUHUI DISTRICT, SHANGHAI</p>
+      <p class="tel">Tel：+ 86 21 3363 3599</p>
+      <p>Fax：+ 86 21 3363 3598</p><br>
+      <p>Business Consulting：+ 86 21 3363 3599-5007</p>
+      <P>dev.sh@ccd.com.hk</P>
+    </div>
+
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+      <h1 class="t_title">Beijing</h1>
+      <p>1501C, TOWER E, SANLITUN SOHO, CHAOYANG DISTRICT, BEIJING</p>
+      <p class="tel">Tel：+ 86 10 6500 0499</p>
+      <p>Fax：+ 86 10 6500 7829</p><br>
+      <p>Business Consulting：+ 86 010 6500 0499 - 8013</p>
+      <P>dev.bj@ccd.com.hk</P>
+    </div>
+
+    <div class="wow fadeInDown" data-wow-delay="1s">
+      <h1 class="t_title">Shenzhen Development Dept.</h1>
+      <p class="tel">Tel：+ 86 755 8384 9557</p>
+      <p>Fax：+ 86 755 8384 9557</p>
+      <p>development@ccd.com.hk</p>
+    </div>
+
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+      <h1 class="t_title">Shanghai Development Dept.</h1>
+      <p class="tel">Tel：+ 86 21 3363 3599-5007</p>
+      <p>Fax：+ 86 21 3363 3598</p>
+      <p>dev.sh@ccd.com.hk</p>
+    </div>
+    <div class="wow fadeInDown" data-wow-delay="1s">
+      <h1 class="t_title">HR Dept</h1>
+      <p class="tel">Tel：+ 86 755 8347 7007</p>
+      <p >hr@ccd.com.hk</p>
+    </div>
+
+    <div class="wow fadeInDown" data-wow-delay="0.5s">
+      <h1 class="t_title">Branding Dept.</h1>
+      <p>pr@ccd.com.hk</p>
+    </div>
+
+    <div class="wow fadeInDown" data-wow-delay="1s">
+      <h1 class="t_title">Shenzhen (Luohu)</h1>
+      <p>7F,KINGKEY 100 BUILDING A BLOCK, NO.5016 SHENNAN EAST ROAD, LUOHU DISTRICT, SHENZHEN.</p>
+      <p class="tel">Tel：+ 86 755 2558 5055</p>
+      <p>Fax：+ 86 755 2558 7070</p>
+      <p>hr.in@ccd.com.hk<br>dev.in@ccd.com.hk<br>design.in@ccd.com.hk</p>
+    </div>
+
+  </div>
+</div>
+<script>
+  var wow = new WOW(
+    {
+      boxClass:     'wow',
+      animateClass: 'animated',
+      offset:       0,
+      mobile:       true,
+      live:true,
+    }
+  )
+  wow.init();
+</script>
+</body>
+</html>
