@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/css/animate.css">
   <script src="/js/jquery.min.js"></script>
   <script src="/js/wow.js"></script>
+  <script src="/js/typed.min.js"></script>
   <script>
     // var _hmt = _hmt || [];
     // (function() {
@@ -91,12 +92,17 @@
 
 </script>
 <div class="container">
-  <img src="/img/taixian.png" class="taixian animated fadeIn">
+<!--  <img src="/img/taixian.png" class="taixian animated fadeIn">-->
+  <div class="container-slogan">
+    <div class="iam">I'm</div>
+    <div class="text"></div>
+  </div>
+
   <img src="/img/shadow.png" class="txshadow">
-  <!-- <div class="txshadow">
-      <img src="/img/shadow.png" >
-      <div class="fxshadow"></div>
-  </div> -->
+<!--  <div class="txshadow">-->
+<!--      <img src="/img/shadow.png" >-->
+<!--      <div class="fxshadow"></div>-->
+<!--  </div>-->
 </div>
 <script>
   document.body.addEventListener('touchmove', function (e) {
@@ -121,6 +127,14 @@
     }
   )
   wow.init();
+
+
+  var typing = new Typed(".text", {
+    strings: ["", "Notus", "Freelancer", "Web Designer"],
+    typeSpeed: 200,
+    backSpeed: 40,
+    loop: true,
+  });
 </script>
 </body>
 </html>
